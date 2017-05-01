@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"/>
     <Button
             android:id="@+id/unsubscribeFromTopic"
-            android:text="Subsribe to topic"
+            android:text="Unsubsribe to topic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 </LinearLayout>
