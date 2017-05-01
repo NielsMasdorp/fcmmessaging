@@ -21,8 +21,14 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
         Log.d(TAG, "from = " + remoteMessage.getFrom());
         Log.i(TAG, "token = " + FirebaseInstanceId.getInstance().getToken());
 
+        RemoteMessage.Notification remoteNotification = remoteMessage.getNotification();
+
+        String title = ((remoteNotification == null) || (remoteNotification.getTitle() == null)) ? "Testbericht" : remoteNotification.getTitle();
+        String text = ((remoteNotification == null) || (remoteNotification.getBody() == null)) ? "Testinhoud" : remoteNotification.getBody();
+
         final Notification notification = new NotificationCompat.Builder(this)
-                .setContentTitle("test bericht")
+                .setContentTitle(title)
+                .setContentText(text)
                 .setSmallIcon(R.mipmap.notification_icon)
                 .build();
         final NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
