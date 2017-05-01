@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "904629284677",
+    "firebase_url": "https://fcmmessagingtest-acd23.firebaseio.com",
+    "project_id": "fcmmessagingtest-acd23",
+    "storage_bucket": "fcmmessagingtest-acd23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904629284677:android:f9be2a112b168eaf",
+        "android_client_info": {
+          "package_name": "messaging.capaxit.nl.fcmmessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904629284677-5fm48frc84d70mpkrbqtfagnjuen1f97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "messaging.capaxit.nl.fcmmessaging",
+            "certificate_hash": "4ec8b5d3841d0920ee7a41f6b4f61404e8763716"
+          }
+        },
+        {
+          "client_id": "904629284677-fvq8v21pli6omker19f71ql2nbu68jqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfCXsZWcUF61n-3UP6tMUHsfZvtoq8zDg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904629284677-fvq8v21pli6omker19f71ql2nbu68jqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
