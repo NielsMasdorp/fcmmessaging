@@ -2,11 +2,14 @@ package messaging.capaxit.nl.fcmmessaging.service;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import messaging.capaxit.nl.fcmmessaging.MessageDetailsActivity;
 import messaging.capaxit.nl.fcmmessaging.R;
 
 /**
@@ -22,13 +25,19 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
         Log.i(TAG, "token = " + FirebaseInstanceId.getInstance().getToken());
 
         RemoteMessage.Notification remoteNotification = remoteMessage.getNotification();
-
         String title = ((remoteNotification == null) || (remoteNotification.getTitle() == null)) ? "Testbericht" : remoteNotification.getTitle();
         String text = ((remoteNotification == null) || (remoteNotification.getBody() == null)) ? "Testinhoud" : remoteNotification.getBody();
+
+        final Intent messageDetailsIntent = new Intent(this, MessageDetailsActivity.class);
+        if (remoteMessage.getData() != null) {
+            messageDetailsIntent.putExtra(MessageDetailsActivity.INTENT_NOTIFICATION_TYPE, remoteMessage.getData().get("type"));
+        }
 
         final Notification notification = new NotificationCompat.Builder(this)
                 .setContentTitle(title)
                 .setContentText(text)
+                .setAutoCancel(true)
+                .setContentIntent(PendingIntent.getActivity(this, 0, messageDetailsIntent, PendingIntent.FLAG_CANCEL_CURRENT))
                 .setSmallIcon(R.mipmap.notification_icon)
                 .build();
         final NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
