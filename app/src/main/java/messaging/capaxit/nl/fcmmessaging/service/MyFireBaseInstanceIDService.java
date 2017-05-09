@@ -1,6 +1,7 @@
 package messaging.capaxit.nl.fcmmessaging.service;
 
 import android.util.Log;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
 /**
@@ -13,5 +14,6 @@ public class MyFireBaseInstanceIDService extends FirebaseInstanceIdService {
     public void onTokenRefresh() {
         super.onTokenRefresh();
         Log.i(TAG, "onTokenRefresh");
+        Log.i(TAG, "token = " + FirebaseInstanceId.getInstance().getToken());
     }
 }

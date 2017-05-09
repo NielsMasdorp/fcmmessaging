@@ -28,4 +28,16 @@
             android:text="Unsubscribe from topic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/registerToFcm"
+            android:text="Register to FCM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/unregisterFromFcm"
+            android:text="Unrgegister from FCM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 </LinearLayout>
