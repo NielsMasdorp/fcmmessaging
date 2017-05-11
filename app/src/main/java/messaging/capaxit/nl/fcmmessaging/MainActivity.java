@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
                 unregisterFromFcm();
             }
         });
+        findViewById(R.id.logFcmToken).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Log.i(TAG, FirebaseInstanceId.getInstance().getToken());
+            }
+        });
     }
 
     private void unregisterFromFcm() {

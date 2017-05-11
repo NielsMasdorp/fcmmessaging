@@ -37,7 +37,13 @@
 
     <Button
             android:id="@+id/unregisterFromFcm"
-            android:text="Unrgegister from FCM"
+            android:text="Unregister from FCM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/logFcmToken"
+            android:text="Log FCM token"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 </LinearLayout>
