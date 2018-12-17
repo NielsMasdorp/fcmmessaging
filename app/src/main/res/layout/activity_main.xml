@@ -31,7 +31,7 @@
 
     <Button
             android:id="@+id/registerToFcm"
-            android:text="Register to FCM"
+            android:text="Show token in log"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
