@@ -15,6 +15,7 @@
 
     <EditText
             android:id="@+id/topicName"
+            android:hint="Enter a topicname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
